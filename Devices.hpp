@@ -3,6 +3,7 @@
 #include <iostream>
 #include "Mediator.hpp"
 
+// Concrete Colleague phát sự kiện AlarmRang qua giao diện Mediator sau khi reo.
 class AlarmClock : public Device {
 public:
     void ring() {
@@ -13,6 +14,7 @@ public:
     }
 };
 
+// Concrete Colleague lưu giá trị độ sáng mô phỏng để SmartHome đọc khi cần.
 class LightSensor : public Device {
 private:
     int brightness = 0;
@@ -27,6 +29,7 @@ public:
     }
 };
 
+// Concrete Colleague mô phỏng thao tác mở và đóng rèm bằng thông báo trên console.
 class WindowBlinds : public Device {
 public:
     void open() {
@@ -38,6 +41,7 @@ public:
     }
 };
 
+// Concrete Colleague mô phỏng việc bắt đầu pha cà phê khi được gọi brew().
 class CoffeeMaker : public Device {
 public:
     void brew() {
@@ -45,6 +49,7 @@ public:
     }
 };
 
+// Concrete Colleague lưu nhiệt độ cài đặt và in thông báo khi chỉnh nhiệt độ hoặc tắt.
 class AirConditioner : public Device {
 private:
     int degree = 0;
